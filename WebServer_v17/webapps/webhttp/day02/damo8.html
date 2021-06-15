@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>超连接</title>
+</head>
+<body>
+	<form action="#">
+     
+		姓名<input type="text" size="32" placeholder="名字" maxlength="8" name="username"><br>
+
+		性别<input type="radio" name="gander" id="男" checked="checked" value="男"><label
+			for="男">男</label><input type="radio" name="gander" id="女" value="女"><label
+			for="女">女</label> <br>
+			
+	 爱好:<input name="hobby" type="checkbox" id="paly" value="大郎求" ><label
+			for="paly">打篮球</label> 
+			<input  name="hobby"type="checkbox" id="niu"><label for="niu">泡妞</label>
+			 <input name="hobby" type="checkbox" id="qiao"> <label for="qiao">敲代码</label>
+			  <input name="hobby" type="checkbox" id="swping"> <label for="swping">游泳</label>
+			  <br>
+         生日<input type="date" name="birthday"><br> 
+         头像<input type="file" name="pic"><br>
+         城市:
+         <select name="city">
+          <option>请选择</option>
+                  <option value="sh" selected="selected">上海</option>
+                  <option value="sz"> 深圳</option>
+                  <option value="bj">北京</option>
+         </select><br>
+         个人显示:<textarea rows="4" cols="30" name="ll"></textarea>
+          <input type="hidden" name="username" value="1231565"><br>
+          <input type="submit" value="注册">
+          <input type="reset" value="重至">
+
+	</form>
+</body>
+</html>

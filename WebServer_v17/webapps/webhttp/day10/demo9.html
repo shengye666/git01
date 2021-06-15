@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.big{
+width: 450px;
+height: 550px;
+border: 8px solid #999;
+border-radius:10px;
+padding: 10px;
+margin: 25px auto;
+overflow: hidden;
+}
+.div{
+width: 500px;
+overflow: hidden;
+}
+div>p{
+padding: 0px;
+margin:0px 10px 2px 6px;;
+float:left;
+border: 8px solid #999;
+width: 300px;
+height: 100px;
+border-radius: 8px;
+font-size: 50px;
+font-weight: bold;
+overflow: auto;
+line-height: 100px;
+}
+.button{
+float:left;
+margin:5px;
+padding: 0px;
+width: 100px;
+height: 100px;
+border: 8px solid #999;
+background-color: #ccc;
+border-radius: 8px;
+font-size: 30px;
+font-weight: bolder;
+}
+
+</style>
+<script type="text/javascript">
+function fn(){
+	var obj=event.target||event.srcElement;
+   
+	if("INPUT"==obj.nodeName){
+		var x=obj.value;
+	var p=document.getElementById("p");
+     if('C'==x){
+		p.innerText="";
+	  }else if('='==x){
+		p.innerText=eval(p.innerText);
+	  }else{
+	  p.innerHTML+=x;
+	}
+}
+}
+</script>
+</head>
+<body>
+<div class="big" onclick="fn()">
+<div class="div">
+<p id="p"></p><input type="button" class="button" value="C" >
+</div>
+<div class="div">
+<input type="button" class="button" value="7" >
+<input type="button" class="button" value="8" >
+<input type="button" class="button" value="9">
+<input type="button" class="button" value="/" >
+</div>
+<div class="div">
+<input type="button" class="button" value="4" >
+<input type="button" class="button" value="5" >
+<input type="button" class="button" value="6" >
+<input type="button" class="button" value="*" >
+</div>
+<div class="div">
+<input type="button" class="button"value="1" >
+<input type="button" class="button"value="2" >
+<input type="button" class="button"value="3" >
+<input type="button" class="button"value="-" >
+</div>
+<div class="div">
+<input type="button" class="button"value="0" >
+<input type="button" class="button"value="." >
+<input type="button" class="button"value="=" >
+<input type="button" class="button"value="+" >
+</div>
+</div>
+</body>
+</html>

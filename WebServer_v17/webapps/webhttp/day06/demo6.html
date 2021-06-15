@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.blue{
+    width:100px;
+	background-color: blue; 
+	border: 1px solid blue;
+	color: white;
+}
+.red{
+ width:100px;
+background-color: red; 
+	border: 1px solid red;
+	color: white;
+}
+</style>
+<script type="text/javascript">
+function add(x){
+var d=document.getElementById("big");
+  d.innerHTML+="<div class='"+x+"'>我是大业</div>";
+  
+}
+
+</script>
+</head>
+<body>
+
+<input type="button" value="蓝色" onclick="add('blue')">
+<input type="button" value="红色" onclick="add('red')">
+<div id="big" ></div>
+</body>
+</html>

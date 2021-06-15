@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+	  $(".ti ul").hide();
+	  $(".ti").click(function(){
+		  if( $(this).children().css("display")=="none"){
+			  $(".ti ul").hide();
+		  $(this).children().show();
+		  }else{
+			  $(this).children().hide();
+		  }
+	  })
+  })
+</script>
+</head>
+<body>
+	<ul >
+		<li class="ti">美女好友
+			<ul>
+				<li>kiki</li>
+				<li>mimi</li>
+				<li>lili</li>
+			</ul>
+		</li>
+		<li class="ti">垃圾好友
+			<ul>
+				<li>狗嘉</li>
+				<li>实施</li>
+				<li>又有</li>
+			</ul>
+		</li>
+		<li class="ti">呵呵呵好友
+			<ul>
+				<li>猪</li>
+				<li>狗</li>
+				<li>猫</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

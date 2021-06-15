@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p{
+font-size: 30px;
+font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+	 var inputs=document.getElementsByName("input");
+function calfn(){
+	  var index=0;
+	 for(var i=0;i<inputs.length;i++){
+		 var input=inputs[i];
+		 if(input.checked){
+			 index+=parseInt(input.value);
+		 }
+	 }
+	 p1.innerText="总价 "+index+"元";
+}
+
+
+function qalfn(){
+	var all=document.getElementById("all");
+	  if(all.checked){
+		  for(var i=0;i<inputs.length;i++){
+				 var input=inputs[i];
+				 input.checked=true;
+			 }
+	  }else{
+		  for(var i=0;i<inputs.length;i++){
+				 var input=inputs[i];
+				 input.checked=false;
+			 }
+	  }
+	 calfn();
+}
+
+  
+
+
+</script>
+</head>
+<body>
+<h1>订单练习</h1><br><br>
+<input type="checkbox"   value="10"  onclick="calfn()" name="input" id="10" ><label for="10">记事本10元</label><br>
+<input type="checkbox"   value="2000" onclick="calfn()" name="input" id="2000"><label for="2000">手机2000元</label><br>
+<input type="checkbox"   value="2" onclick="calfn()" name="input" id="2"><label for="2">橡皮2元</label><br>
+<input type="checkbox"   value="3000" onclick="calfn()" name="input" id="3000"><label for="3000">电视机3000元</label><br>
+<hr>
+<input type="checkbox" onclick="qalfn()" id="all" ><label for="all">全选</label><br><br><br>
+<p id="p1">总价0元</p>
+</body>
+</html>

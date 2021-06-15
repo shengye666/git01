@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>学子商城注册页面校验</title>
+ <link rel="stylesheet" href="index.css">
+ <script type="text/javascript">
+ function checkname(){
+	 var name=document.getElementById("ursename").value;
+	 var nameOption=document.getElementById("nameOption");
+	 var str=/^\w{6,9}$/;
+	if(name==""){
+		nameOption.innerHTML="用户名不能为空";
+		nameOption.className="msg_error"	;
+	}else if(str.test(name)){
+		nameOption.innerHTML="用户格式正确";
+		nameOption.className="msg_success"	;
+	}else{
+		nameOption.innerHTML="用户名为6-9位的任意字符";
+		nameOption.className="msg_error"	;
+	}
+ }   
+function showpassword(){
+	var pwdOption=document.getElementById("pwdOption");
+	pwdOption.className="msg_default";
+	 pwdOption.innerHTML="密码为6-12位的任意字符组合";
+}
+ 
+function checkpassword(){
+	var password=document.getElementById("password").value;
+	 var pwdOption=document.getElementById("pwdOption");
+	 var str=/^\w{6,12}$/;
+	 if(password==''){
+		 pwdOption.innerHTML="密码不能位空";
+			 pwdOption.className="msg_error";
+	 }else if(str.test(password)){
+		 pwdOption.innerHTML="密码格式正确";
+		 pwdOption.className="msg_success";
+	 }else{
+		 pwdOption.innerHTML="密码为6-12位的任意字符组合";
+		 pwdOption.className="msg_error";
+	 }
+ } 
+ 
+function showsurepassword(){
+	var pwdOptions=document.getElementById("pwdOptions");
+	pwdOptions.className="msg_default";
+	pwdOptions.innerHTML="密码为6-12位的任意字符组合";
+}
+ 
+ 
+ 
+function checksurepassword(){
+	var pwdOptions=document.getElementById("pwdOptions");
+   var repass=document.getElementById("requestpassword").value; 
+	var password=document.getElementById("password").value;
+	if(repass==''){
+		pwdOptions.className="msg_error";
+		pwdOptions.innerHTML="确认密码不能为空";
+	}else if(repass==password){
+		pwdOptions.className="msg_success";
+		pwdOptions.innerHTML="确认密码正确";
+	}else{
+		pwdOptions.className="msg_error";
+		pwdOptions.innerHTML="确认密码不正确";
+	}
+} 
+
+function showem(){
+	var emOptions=document.getElementById("emOptions");
+	emOptions.className="msg_default";
+	emOptions.innerHTML="请输入正确邮箱格式";
+}
+
+
+function checkem(){
+	var emOptions=document.getElementById("emOptions");
+	 var e=document.getElementById("email").value; 
+	var regex=/^\w+@[a-zA-Z]+\.com$/;
+	if(e==''){
+		emOptions.className="msg_error";
+	   emOptions.innerHTML="邮箱不能为空";
+	}else if(regex.test(e)){
+		emOptions.className="msg_success";
+		   emOptions.innerHTML="邮箱格式输入正确";
+	}else{
+		emOptions.className="msg_error";
+		   emOptions.innerHTML="请输入正确邮箱格式";
+	}
+} 
+
+function showphone(){
+	var phOptions=document.getElementById("phOptions");
+	phOptions.className="msg_default";
+	phOptions.innerHTML="请输入正确手机号码";
+}
+
+function checkphone(){
+	var phOptions=document.getElementById("phOptions");
+	 var ph=document.getElementById("phone").value; 
+	var regex=/^1[3578]\d{9}$/;
+	if(ph==''){
+		phOptions.className="msg_error";
+		phOptions.innerHTML="手机号码不能为空";
+	}else if(regex.test(ph)){
+		phOptions.className="msg_success";
+		phOptions.innerHTML="手机号码格式输入正确";
+	}else{
+		phOptions.className="msg_error";
+		phOptions.innerHTML="请输入正确手机号码格式";
+	}
+	
+	
+} 
+ 
+ </script>
+</head>
+<body>
+	<header>
+		<img alt="加载失败" src="../../images/day06/logo.png">
+		<h1>欢迎注册</h1>
+	</header>
+	<article>
+		<form action="#">
+			<div class="article_1">
+				<div class="article_1_small">
+					<h3>
+						新用户注册<a href="#">直接登陆</a>
+					</h3>
+					<div class="d1">
+						<span>用户名:</span>
+						<input type="text" placeholder="请输入用户名" id="ursename" maxlength="9" onblur="checkname()">
+						<span id="nameOption" class="msg_default" >用户名为6-9位的任意字符</span>
+					</div>
+					<div class="d2">
+						<span>登陆密码:</span>
+						<input type="password" placeholder="请输入密码" id="password" maxlength="12" onblur="checkpassword()" onfocus="showpassword()"  >
+							<span id="pwdOption" class="msg_default_hidden">密码为6-12位的任意字符组合</span>
+					</div>
+					<div class="d3">
+						<span>确认密码:</span>
+						<input type="password" placeholder="请确认密码" id="requestpassword" maxlength="12"onblur="checksurepassword()" onfocus="showsurepassword()">
+							<span id="pwdOptions" class="msg_default_hidden">密码为6-12位的任意字符组合</span>
+					</div>
+					<div class="d4">
+						<span>邮箱:</span>
+						<input type="text" placeholder="请输入邮箱地址" id="email" onfocus="showem()" onblur="checkem()">
+						<span id="emOptions" class="msg_default_hidden">请输入正确邮箱格式</span>
+					</div>
+					<div class="d5">
+						<span>手机号:</span>
+						<input type="text" placeholder="请输入您的手机号" id="phone"  onfocus="showphone()" onblur="checkphone()">
+						<span id="phOptions" class="msg_default_hidden">请输入正确手机号码</span>
+					</div>
+					<input type="submit" value="提交注册信息">
+				</div>
+			</div>
+		</form>
+
+		<div class="article_2">
+		<div><img src="../../images/day06/icon1.png"><a href="#">品质保障</a></div>
+		<div><img src="../../images/day06/icon2.png"><a href="#">私人定制</a></div>
+		<div><img src="../../images/day06/icon3.png"><a href="#">学员特供</a></div>
+		<div><img src="../../images/day06/icon4.png"><a href="#">专属特权</a></div>
+		</div>
+	</article>
+	<footer>
+	<div class="footer_div">
+	<div class="footer_div_1">
+	<img src="../../images/day06/logo.png"><img  src="../../images/day06/footerFont.png">
+	</div>
+	<div class="footer_div_2">
+	<div>
+	<p>买家帮助</p>
+	<ul>
+	<li>新手指南</li>
+	<li>服务保障</li>
+	<li>常见问题</li>
+	</ul>
+	</div>
+	<div>
+	<p>商家帮助</p>
+	<ul>
+	<li>商家入驻</li>
+	<li>商家后台</li>
+	</ul>
+	</div>
+	<div>
+	<p>关于我们</p>
+	<ul>
+	<li>关于达内</li>
+	<li>联系我们</li>
+	</ul>
+	<div id="img"><img src="../../images/day06/wechat.png"><img src="../../images/day06/sinablog.png">
+	</div>
+	</div>
+	</div>
+	<div class="footer_div_3">
+	<div class="footer_div_3_1">
+	<p>商城客户端</p>
+	<img src="../../images/day06/ios.png">
+	<img  src="../../images/day06/android.png">
+	</div>
+	
+	<div class="footer_div_3_2">
+	<img  src="../../images/day06/erweima.png">
+	</div>
+	
+	</div>
+	</div>
+	<p>2017达内集团有限公司 版权所有 京ICP证xxxxxxxxxxxx</p>
+	</footer>
+
+</body>
+</html>
+<!-- 	使用正则表达式实现学子上传注册页面校验功能，最终效果如图index01.png-index04.png
+	注意点：
+		1.当鼠标定位到文本框上时，右侧给出输入的格式规则
+		2.当鼠标移出文本框，开始校验，如果输入的内容为空，给出“不能为空”提示，字体颜色为红色
+		3.如果输入的内容不为空，但是不符合定义的规则，那么给出“XXX格式不正确”提示，字体颜色为红色
+		4.当输入的内容格式正确，右侧给出"xx输入正确"提示，字体颜色为绿色
+		
+		具体效果可以参考学子商城注册页面的效果，各个内容的格式同学可自定义。 -->

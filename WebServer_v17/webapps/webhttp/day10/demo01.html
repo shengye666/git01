@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+background-image: url("zombimgs/bg.jpg");
+background-repeat:no-repeat;
+margin: 0;
+position: relative;
+overflow: hidden;
+}
+img{
+position: absolute;
+width:80px;
+height: 90px;
+
+}
+#h1{
+margin:0;
+font-weight:bold;
+float: left;
+color: white;
+}
+#h2{
+margin:0;
+font-weight:bold;
+float: right;
+color: white;
+}
+div{
+   position: absolute;
+
+}
+</style>
+<script type="text/javascript">
+   //成功次数
+  var successCount=0;
+   //失败次数
+  var falseCount =0;
+   
+  
+  var  moveId ;
+  var addId;
+  
+   onload=function(){
+	   changesize();
+   }
+   function changesize(){
+	   var w= document.body.clientWidth;
+	   var h=document.body.parentElement.clientHeight;
+	   document.body.style.backgroundSize=w+"px "+h+"px";
+   }
+
+onresize=function(){
+	changesize();
+}         
+
+
+         function statr(){
+            //生成僵尸图片对象
+          addId =  setInterval(function(){
+            	var  img=document.createElement("img");
+            	var i= parseInt(Math.random()*4);
+            	  img.src="zombimgs/zomb"+i+".png";
+            	
+            	  document.body.appendChild(img);
+            	  
+                       //得到窗口的宽度 ,计算僵尸进入时的位置           	  
+            	   var w= document.body.clientWidth;
+                       img.style.left=w+"px";
+                        //得到窗口的高度,计算僵尸纵向的高度            	   
+            	   var h=document.body.parentElement.clientHeight-90;
+            	         img.style.top=parseInt(Math.random()*h)+"px";
+                       	  //给图片动态添加事件       
+            	         img.onmouseover=function(){
+            	        	 document.body.removeChild(this);
+            	        	 successCount++;
+            	        	 h1.innerText="成功次数 "+successCount;
+                       	  }
+              },600);
+   //定时移动僵尸
+         moveId = setInterval(function(){
+    	        var imgs=document.getElementsByTagName("img");
+    	        for(var i=0;i<imgs.length;i++){
+    	        	 var img=imgs[i];
+    	        	   var oldleft=parseInt(img.style.left);
+    	        	    oldleft-=1+parseInt(successCount/30);
+    	        	    img.style.left=oldleft+"px";
+    	        	if(oldleft<=-80){
+    	        		document.body.removeChild(img);
+    	        		falseCount++;
+    	        		h2.innerText="失败次数 "+falseCount;
+    	        		
+    	        	}
+    	        }
+      },10);
+         }
+                     
+         function lef(){
+        	 if(successCount==30){
+        		 document.body.style.backgroundImage="url('zombimgs/PVZBackground_4.jpg')";
+        	 }
+         }
+       
+         function falt(){
+        	 if(falseCount>=10){
+        		 falseCount=0;
+        		 successCount=0;
+        		 stop();
+        		   h1.innerText="成功次数 "+successCount;
+        			h2.innerText="失败次数 "+falseCount;
+        			document.body.style.backgroundImage="url('zombimgs/bg.jpg')";
+        		 var imgs=document.getElementsByTagName("img");
+        		 for(var i=imgs.length;i>0;i--){
+        			 var img=imgs[i-1];
+        		    document.body.removeChild(img);
+        		 }
+        		 
+        	 }
+         }
+         function stop(){
+        	 clearInterval(moveId);
+      	 clearInterval(addId);
+         }
+         onclick =  function(){
+        	 stop();
+        	 statr();
+         } 
+         
+     onblur=function(){
+	   stop();
+        }
+     setInterval(falt,0);
+     setInterval(lef,0);
+</script>
+</head>
+<body>
+    <h3 id="h1"  >成功次数 0</h3>
+    <h3 id="h2">失败次数 0</h3>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+div,img{
+width:300px;
+height:300px;
+}
+div{
+overflow:hidden;
+position: relative;
+}
+img{
+position: absolute;
+}
+</style>
+<script type="text/javascript">
+
+
+    onload=function(){
+    	var imgs=document.getElementsByTagName("img");
+    	for(var i=0;i<imgs.length;i++){
+    		imgs[i].style.left=i*300+"px";
+    	}
+    	start();
+    }
+    
+function  move(){
+      var moveId=setInterval(function(){
+	   var imgs=document.getElementsByTagName("img");
+	   for(var i=0;i<imgs.length;i++){
+             img=imgs[i]     		   
+		   var oldLeft=img.style.left;
+		   oldLeft=parseInt(oldLeft);
+		   oldLeft-=2;
+		   img.style.left=oldLeft+"px";
+		   if(oldLeft<-300){
+			   oldLeft=(imgs.length-1)*300;
+			   img.style.left=oldLeft+"px";
+	     clearInterval(moveId); 
+		   }
+	   }
+   },10)    
+}	
+var timeId
+function start(){
+	 clearInterval(timeId);
+	 timeId=setInterval(move,3000);
+}
+function stop(){
+	clearInterval(timeId);
+}
+onblur=function(){
+	stop();
+}
+onfocus=function(){
+	start();
+}
+
+
+
+</script>
+</head>
+<body>
+
+<div onmouseover="stop()" onmouseout="start()">
+<img src="aa/t01c13583f138b49e13.jpg">
+<img src="aa/20171109053914202.jpg">
+<img src="aa/1508828578761-0.jpg">
+</div>
+</body>
+</html>

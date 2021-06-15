@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function add(){
+	var d1=document.getElementById("d1");
+	 var width=document.getElementById("width").value;
+	 var height=document.getElementById("height").value;
+	 var top=document.getElementById("top").value;
+	 var left=document.getElementById("left").value;
+ 
+	 d1.style.width=width+"px";
+	 d1.style.height=height+"px";
+	 d1.style.marginTop=top+"px";
+	 d1.style.marginLeft=left+"px";
+}
+
+function adds(){
+	var d1=document.getElementById("d1");
+	d1.style.color="green";
+	
+	
+}
+function addcolor(){
+	var d1=document.getElementById("d1");
+	d1.style.backgroundColor="red";
+	
+	
+}
+function move(){
+	var d1=document.getElementById("d1");
+	    oldLeft= d1.style.marginLeft;
+	
+	    if(oldLeft==''){
+	    	oldLeft=0;
+	    }
+	    oldLeft=parseInt(oldLeft)+10;
+	
+	    d1.style.marginLeft=oldLeft+"px";
+	    
+}
+
+</script>
+</head>
+<body>
+<input type="text" placeholder="元素宽度" id="width">
+<input type="text" placeholder="元素高度" id="height">
+<input type="text" placeholder="距顶部距离" id="top">
+<input type="text" placeholder="距左侧距离" id="left">
+<input type="button" value="改变样式"  onclick="add()">
+<input type="button" value="字体绿色" onclick="adds()">
+<input type="button" value="背景红色" onclick="addcolor()">
+<input type="button" value="移动" onclick="move()">
+<div id="d1">runingman</div>
+</body>
+</html>

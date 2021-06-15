@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+function jstojq(){
+	var input=document.getElementById("my"); 
+	
+	var $jq=$(input);
+	alert($input.val());
+	
+	
+}
+function jqtojs(){
+	var $jq=$("#my");
+   var js1=$jq.get(0);	
+   var js2=$jq[0];	
+   alert(js1.value+" "+js2.value);
+}
+
+$(function(){
+	var $myid=$("#myid")
+	$myid.click(function(){
+		alert("的哦漫画");
+	});
+	
+});
+
+
+</script>
+</head>
+<body>
+<input type="text"   id="my">
+<input type="button"    value="按我 " onclick="jqtojs()"> 
+<input type="button" value="动态绑定事件" id="myid">
+</body>
+</html>

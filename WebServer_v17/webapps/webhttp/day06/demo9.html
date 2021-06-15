@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+td{
+width:300px;
+height: 300px;
+border: 1px solid red;
+}
+</style>
+<script type="text/javascript">
+function add(){
+	var one=document.getElementById("parameterone");
+   var two=document.getElementById("parametertwo");
+   var onev=one.value;
+   var twov=two.value;
+   var d=document.getElementById("big");
+      d.innerHTML="<table id='mytable' ></table>";       
+    var table=document.getElementById("mytable");
+    var str="";
+    
+    for(var i=0;i<onev;i++){
+    	  str+="<tr>"; 
+    	for(var j=0;j<twov;j++){
+    		str+="<td>"+i+"-"+j+"</td>"
+    	}
+    	str+="</tr>"
+    }
+    
+    table.innerHTML=str;
+}
+</script>
+</head>
+<body>
+行:<input type="text"  id="parameterone">
+列<input  type="text" id="parametertwo" > 
+<input type="button" value="生成" onclick="add()">
+<div id="big"></div>
+</body>
+</html>

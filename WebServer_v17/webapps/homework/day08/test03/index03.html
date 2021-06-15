@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>字符串数组作业</title>
+<style type="text/css">
+.netli{
+list-style-type: none;
+}
+</style>
+<script type="text/javascript">
+function run(){
+	 var text = document.getElementsByName("text");
+    var ul = document.getElementById("ul");
+     for(var i=0;i<text.length;i++){
+    	   var net = text[i].value;
+    	      var start= net.indexOf('.')+1;
+    	      var ends= net.indexOf('.',start);
+    	      var str=net.substring(start,ends).toUpperCase();
+    	      var li="<li class='.netli'><a href='"+net+"'>[name]</a></li>";
+    	      li=li.replace("[name]",str);
+    	      ul.innerHTML +=li;
+     }
+	}
+</script>
+
+</head>
+<body>
+
+<input type="text" placeholder="请输入网址1"  name="text"><br><br>
+<input type="text" placeholder="请输入网址2" name="text"><br><br>
+<input type="text" placeholder="请输入网址3" name="text"><br><br>
+<input type="button" value="提取域名生成链接" onclick="run()"><br>
+<ul id="ul"></ul>
+
+</body>
+</html>
+<!-- 	实现如图index01.png-index02.png所示的案例，在三个文本框输入三个网址，点击“提取域名生成链接”按钮，
+	将输入的三个网址的域名提取出并转换为大写，生成超链显示在按钮下方的无序列表中,点击某个连接，跳转到
+	该域名对应的文本框输入的的网址的页面 -->

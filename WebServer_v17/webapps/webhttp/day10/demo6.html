@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function add(){
+	/* 通过event得到事件原 存在兼容性问题
+	有的浏览器支持target,有些支持srcElement;
+	用或或来兼容
+	
+	*/
+	var a=event.srcElement||event.target;
+	alert("标签名称 "+a.nodeName);
+}
+
+</script>
+</head>
+<body>
+<h1 onclick="add()">梅花</h1>
+<input type="button"  value="点我试" onclick="add()">
+</body>
+</html>

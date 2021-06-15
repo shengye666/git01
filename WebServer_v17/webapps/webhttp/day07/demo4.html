@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function Person(name,age ){
+	this.name=name;
+	this.age=age;
+	this.run=function(){
+		alert("name"+this.name+"age"+this.age);
+	}
+}
+
+   var p=new Person("zhang",13);
+  
+   
+function Superman(){
+}
+   var sp=new Superman();
+     sp.name="haha";
+     sp.age=13;
+     sp.send=function(){
+    	 alert("name"+this.name+"age"+this.age);
+     }
+   var b={
+		   "name":"牛逼",
+            "age":15,
+            "run":function(){
+            	alert("name"+this.name+"age"+this.age);
+            }
+   }
+     b.run();
+
+   
+   
+   
+   
+</script>
+</head>
+<body>
+
+</body>
+</html>

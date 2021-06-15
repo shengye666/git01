@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style type="text/css">
+
+
+
+</style><!-- 内部样式 在head标签内部应用 style标签添加样式,好处:可以在本页面内复用样式,弊端:在多各页面不能进行复用
+工作中用外部样式多,学习时为了方便学习展示使用内部样式  优先级看跟外部哪个后写就谁生效-->
+<link  rel="stylesheet" href="demo1.css"><!-- 在此下面是后写的 -->
+</head>
+<body>
+<header>
+<div  style="color: red ; border:1px solid green;"> 哈哈哈</div><!-- 内联样式,复用性弱,几乎不用 优先级最高-->
+  <span style="color: green; border: 3px solid  purple ;">你是</span>
+  <h3>23</h3>
+</header>
+
+<!-- 外部样式 :样式代码单独写在*.css文件中,通过link标签 加入某个http   link也在head内, ref(引用)stylesheep 格式表 href指向css文件-->
+
+<p>这是一个p标签添加外部样式代码</p>
+
+</body>
+</html>

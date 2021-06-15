@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<antisopts>
+		<antisopt name="澳门赌场"  web="/myweb/login.html"/>
+		<antisopt name="澳门普京赌场"  web="/myweb/login.html" />
+		<antisopt name="澳门赌场注册"  web="/myweb/reg.html"/>
+</antisopts>

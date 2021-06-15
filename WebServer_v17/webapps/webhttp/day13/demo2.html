@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width: 200px;
+height: 200px;
+border: 1px solid red;
+}
+img{
+position:relative;
+width: 100px;
+height: 100px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+      function fn1(){
+    	  $("img").hide(3000);
+      }
+ function fn2(){
+    	  $("img").show(3000,function(){
+    	  });
+      }   
+ function fn3(){
+	 $("img").slideUp(2000);
+ }  
+ 
+ function fn4(){
+	 $("img").slideDown(2000);
+ } 
+ 
+ function fn5(){
+	 $("img").fadeOut(2000);
+ }   
+ function fn6(){
+	  $("img").fadeIn(2000)
+ }
+ function fn7(){
+	 $("img").animate({"left":"250px"},1000).animate({"top":"250px"},1000).animate({"left":"0"},1000).animate({"top":"0"},1000).
+	 fadeOut(2000,function(){
+		 $(this).remove();
+	 });
+ }
+ 
+</script>
+</head>
+<body>
+<input type="button"  value="隐藏" onclick="fn1()">
+<input type="button"  value="显示" onclick="fn2()">
+<input type="button"  value="滑出" onclick="fn3()">
+<input type="button"  value="滑入" onclick="fn4()">
+<input type="button"  value="淡出" onclick="fn5()">
+<input type="button"  value="淡入" onclick="fn6()">
+<input type="button"  value="自定义" onclick="fn7()">
+<hr>
+<img alt="" src="aa/1508828578761-0.jpg">
+<audio src="music.mp3" controls="controls" loop="loop" ></audio>
+<video  controls="controls"    poster="aa/1508828578761-0.jpg">
+      <source src="hero.mp4">   
+</video>
+
+</body>
+</html>

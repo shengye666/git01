@@ -1,0 +1,159 @@
+@charset "UTF-8";
+body {
+	font-family: '微软雅黑', '文泉驿正黑', '黑体', serif;
+    font-size: 12px;
+    color: #666;
+    background-color: #f5f5f5;
+    /*body默认自带上下左右8个像素的外边距*/
+    margin: 0;
+}
+
+header {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 20px 50px 30px 50px;
+	overflow: hidden;
+}
+
+header img,header h1{
+ 
+ float: left;
+ }
+ h1{
+ margin: 10px 0 0 24px;
+ font-size: 24px;
+ font-weight: normal;/*去调加粗效果*/
+ }
+
+#form_div {
+	background-image: url('../images/regist.png');
+	color: white;
+	width: 100%;
+	height: 560px;
+}
+#form_panel{
+	width: 264px;
+	margin: 120px 111px 0 0;
+	background-color: rgba(0,0,0,0.3);
+	padding: 8px;
+	float: right;
+}
+#form_panel h2{
+	margin: 0;
+	border-bottom: 1px solid white;
+	padding: 8px;
+} 
+#form_panel>h2>a{
+	color: white;
+	text-decoration: none;webkit-link;
+	font-size: 13px;
+	position: relative;
+	left: 60px;
+}
+.field{
+	position: relative;
+	margin: 15px 0;
+}
+.field input {
+	width: 224px;
+	border: 0;
+	padding: 10px 20px;
+}
+.field img{
+	position: absolute;
+	top: 4px;
+	right: 10px;
+}
+.field span{
+	color: red;
+	position: relative;
+	top: 5px;
+}
+#autologin_div{
+	margin: 15px 0;
+}
+#autologin_div autologin{
+	position:relative;
+	top: 2px;
+}
+#autologin_div>a{
+	float: right;
+	color: white;
+	text-decoration: none;
+}
+#loginbtn{
+	margin: 10px 0;
+}
+#loginbtn input {
+	background-color: #27b0f6;
+	border: 0px;
+	width: 264px;
+	color: white;
+	height: 35px;
+	border-radius: 4px;
+}
+#service_div{
+	width: 1000px;
+	margin: 20px auto;
+	text-align: center;
+	overflow: hidden;
+}
+#service_div div{
+	float: left;
+	width: 250px;
+}
+#service_div div a{
+  color: #666;
+  text-decoration: none;
+  display: block;
+ }
+footer{
+	width: 1000px;
+	background-color: white;
+	margin: 0 auto;
+	padding:20px 0; 
+	
+}
+footer>div{
+	overflow: hidden;
+}
+#footer_left_div{
+	width:333px;
+	float: left;
+}
+#footer_left_div img{
+	margin-left: 40px;
+}
+#footer_center_div{
+	float:left;
+	width: 333px;
+	
+}
+#footer_center_div ul{
+  list-style-type: none;
+  padding: 0px;
+}
+#footer_center_div>ul>li{
+	float: left;
+	width:111px;
+	font-size: 14px;
+	text-align: center;
+}
+#footer_center_div>ul>li>ul>li{
+	margin:5px 0;
+	font-size: 8px;
+}
+#footer_right_div{
+	float:left;
+	width: 333px;
+}
+#footer_right_div div{
+	width:166px;
+	float: left;
+}
+#footer_right_div div h3{
+	margin:0 0 10px;
+}
+footer p{
+	text-align: center;
+}

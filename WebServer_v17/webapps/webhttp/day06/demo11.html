@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function run(){
+	var one=document.getElementById("one");
+	var two=document.getElementById("two");
+	var onev=one.value;
+	var twov=two.value;
+	var str=[];
+	var ul=document.getElementById("uls");
+	if(onev==""||twov==""){
+		alert("内容不能为空");
+		one.value="";
+		two.value="";
+	}else{
+		
+	str.sort(compareble);	
+	str=onev.split(twov);
+	for(var i=0;i<str.length;i++){
+	     ul.innerHTML+="<li>"+str[i]+"</li>";
+	}
+	}
+	}
+function compareble(a,b){
+	return a-b;
+}	
+     
+
+
+</script>
+</head>
+<body>
+<input type="text" id="one">
+<input type="text" id="two">
+<input type="button" value="生成"  onclick="run()" >
+<ul id="uls"></ul>
+</body>
+</html>

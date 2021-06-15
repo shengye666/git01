@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#big{
+width: 300px;
+height: 300px;
+background-color: yellow;
+/* 如果元素的上边和上级元素的上边边缘重叠,此时元素的上外边距会出现粘连问题,通过给上级元素添加一下代码解决问题   */
+overflow: hidden;
+}
+#small{
+width: 50px;
+height: 50px;
+background-color: red;
+margin: 100px 0 0 100px;
+}
+
+span {
+	border:10px solid red;
+	width: 100px;
+	height: 100px;
+	/*行内元素外边距上下不生效*/
+	/*margin: 10px;*/
+	
+}
+
+</style>
+</head>
+<body>
+<div>啦啦啦</div>
+<span>span1</span><span>span2</span>
+	<div id="big">
+		<div id="small">
+		
+		
+		</div>
+	</div>
+</body>
+</html>

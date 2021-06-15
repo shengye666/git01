@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+input {
+	margin: 
+}
+</style>
+<script type="text/javascript">
+function add(){
+	var p1=document.getElementById("p1").value;
+	var regex=/^http/;
+	if(regex.test(p1)){
+		  location.href=p1;	
+	}else{
+		  location.href="http://"+p1;	
+	}
+	
+	
+	
+}
+</script>
+</head>
+<body>
+<input type="text" placeholder="网址1" id="p1">
+<input type="button" value="访问" onclick="add()"> 
+
+</body>
+</html>

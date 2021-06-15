@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>生成三角形</title>
+<style type="text/css">
+#d1{
+width: 300px;
+height: 300px;
+border: 1px solid red;
+}
+.d2{
+float: left;
+width: 20px;
+height: 20px;
+background-color: red;
+border:  1px solid black;
+}
+.d3{
+overflow:hidden;
+height: 20px;
+
+}
+
+</style>
+<script type="text/javascript">
+function run(){
+	var d=document.getElementById("d1");
+	var s=""
+   for(var i=0;i<13;i++){
+	  s+="<div class='d3'>";
+	  for(var j=0;j<=i;j++){
+		s+="<div class='d2'></div>";
+	 }   
+	  s+="</div>";
+   }
+	d.innerHTML+=s;
+}
+</script>
+</head>
+<body>
+<input type="button" value="生成三角形" onclick="run()">
+<div id="d1"></div>
+</body>
+</html>
+	<!-- 实现如图index03_before.png所示的效果，点击生成三角形按钮，使用js实现index03_after.png所示的效果 -->

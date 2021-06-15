@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>动态绑定</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function dowmfn(){
+    console.log("按下"  +String.fromCharCode(event.keyCode));
+
+}
+function upfn(){
+	 console.log("松开");
+
+ }
+    
+    onload=function(){
+    	
+    	myid.onclick=function(){
+    		alert("动态绑定成功"+this);
+    	} 
+    /* 	myid.onclick=my; */
+    }
+  /*   function my(){
+    	alert("动态绑定成功");
+    }
+     */
+     function add(Object){
+    	 alert("动态绑定成功"+this+Object);
+     }
+
+</script>
+</head>
+<body>
+<input type="text" onkeydown="dowmfn()" onkeyup="upfn()">
+<input type="button"value="按我试式" id="myid">
+<input type="button"value="按试式" onclick="add(this)">
+</body>
+</html>

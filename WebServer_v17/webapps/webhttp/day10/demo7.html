@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+  border: 1px solid red;  
+}
+p{
+border: 1px solid green; 
+height: 300px;
+}
+</style>
+<script type="text/javascript">
+ function   myfn(){
+	 var obj=event.target||event.scrElement;
+	 alert(obj.nodeName);
+ }
+
+</script>
+</head>
+<body>
+<div onclick="myfn()">
+
+<p >
+<input type="button" value="我是按钮" onclick="myfn()" >
+</p>
+</div>
+
+
+</body>
+</html>

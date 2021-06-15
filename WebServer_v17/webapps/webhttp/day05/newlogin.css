@@ -1,0 +1,174 @@
+@CHARSET "UTF-8";
+/* ***********头部****************** */
+body{
+	    font-family: '微软雅黑', '文泉驿正黑', '黑体', serif;
+    	font-size: 12px;
+    	color: #666;
+    	background-color: #f5f5f5;
+   		margin: 0;
+	}
+	
+	
+	
+	header{
+		overflow: hidden;
+		padding: 20px 50px 30px 50px;
+		width: 1000px;
+		margin: 0 auto;
+	}
+	header img{
+		float: left;
+	}
+	header h1{
+		float: left;
+		margin: 0;
+		margin: 10px 0 0 24px;
+		font-size: 24px;
+		font-weight: normal;
+	}
+/* ***********头部结尾****************** */
+/* ***********form开始****************** */
+	
+	article{
+		
+	}
+	
+	#form_div{
+		background-image: url('../images/regist.png');
+		width: 100%;
+		height: 560px;
+		color: white;
+	}
+	 #form_panel{
+	 	width: 264px;
+	 	padding: 8px;
+	 	float: right;
+	 	margin: 120px 111px 0 0;
+	 	background-color: rgba(0,0,0,0.3);
+	 }
+	 #form_panel h2{
+	 	margin: 0;
+	 	border-bottom: 1px solid white;
+	 	padding: 8px;
+	 }
+	 #form_panel>h2>a{
+	 	font-size:13px;
+	 	color: white;
+	 	text-decoration: none;
+	 	position: relative;
+	 	left: 60px;
+	 }
+	 .field input{
+	 	width: 224px;/* 264-内边距20*2 */
+	 	border: 0px;/* 去掉边框 */
+	 	padding: 10px 20px;
+	 }
+	 .field{/* 为了给图片定位 */
+	 	position: relative;
+	 	margin: 15px 0;	
+	 }
+	 .field img{
+	 	position: absolute;/* 图片改成绝对定位 */
+	 	top: 4px;
+	 	right: 10px;
+	 }
+	 .field span{/* 错误提示内容 */
+	 	color: red;
+	 	position: relative;/* 对文本位置微调 */
+	 	top: 5px;
+	 }
+	 
+	 #autologin_div>a{
+	 	float: right;/* 让文本显示到最右侧 */
+	 	color: white;
+	 	text-decoration: none;
+	 }
+	 /* 让复选框下移2像素 */
+	 #autologin_div>input{
+	 	position: relative;
+	 	top: 2px;
+	 }
+	 #loginbtn_div{/* 按钮上下添加边距 */
+	 	margin: 10px 0;
+	 }
+	 #loginbtn_div input{
+	 	width: 264px;/* 也可以通过100% */
+	 	background-color: #27b0f6;
+	 	border: 0px;
+	 	color: white;
+	 	height: 35px;
+	 	border-radius:4px;
+	 }
+/* ***********form结尾****************** */
+/* ***********service开始****************** */
+
+#service_div{
+		width: 1000px;
+		margin: 20px auto;
+		/* 为了让内部四个小的div内容居中 */
+		text-align: center;
+		overflow: hidden;/* 解决高度不识别的bug */
+	}
+	#service_div div{
+		float: left;
+		width: 250px;
+	}
+	#service_div div a{
+		display: block;/* 把超链接改成块级 独占一行 */
+		color: #666;
+		text-decoration: none;
+	}
+/* ***********service结尾****************** */
+
+/* ***********footer开始****************** */
+
+footer{
+		width: 1000px;
+		margin: 0 auto;
+		background-color: white;
+		padding: 20px 0;
+	}
+	#footer_left_div img{
+		margin-left: 40px;
+	}
+	
+	footer>p{
+		text-align: center;
+	}
+	/* footer中大的div */
+	footer>div{
+		/* 因为内容全都浮动了 为了识别高度 */
+		overflow: hidden;
+	}
+	/* 三个等大小的div */
+	footer>div>div{
+		width: 333px;/* 1000/3 */
+		float: left;
+	}
+	
+	#footer_center_div ul{
+		list-style-type: none;/* 去掉点 */
+		padding: 0;/* 去掉默认样式 */
+	}
+	#footer_center_div>ul>li{
+		float: left;
+		width: 111px;
+		font-weight: bold;
+		font-size: 14px;
+		text-align: center;
+	}
+	#footer_center_div>ul>li>ul>li{
+		font-size: 12px;
+		margin: 5px 0;
+	}
+	#imgli{
+		 position: relative;
+		 left: -6px;
+	}
+	#footer_right_div div{
+		width: 166px;
+		float: left;
+	}
+	#footer_right_div div h3{
+		margin: 0 0 10px 0; /* 距离下面10px */
+	}

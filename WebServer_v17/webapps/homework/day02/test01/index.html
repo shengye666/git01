@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <form action="success.html">
+       <table border="1"    cellspacing="0" cellpadding="8" align="center" width="600px" >
+			<tr>
+				<td colspan="2" align="center">注册页面</td>
+			</tr>
+
+			<tr>
+				<td>姓名:</td>
+				<td><input type="text" placeholder="用户姓名" maxlength="8" name="username" ></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input type="password" placeholder="密码" maxlength="8" name="password"></td>
+			</tr>
+           <tr>
+				<td>性别:</td>
+				<td><input type="radio" name="gender" id="man" value="男" ><label for="man">男</label>
+				<input type="radio" name="gender" id="nv" value="女"><label for="nv">女</label></td>
+			</tr>
+
+			<tr>
+				<td>生日:</td>
+				<td><input type="date" name="brithday"></td>
+			</tr>
+           
+           	<tr>
+				<td>上传头像:</td>
+				<td><input type="file" name="pick"></td>
+			</tr>
+			
+				<tr>
+				<td>爱好:</td>
+				<td><input type="checkbox"  name="hobby" id="tiao" value="敲代码"><label for="tiao">敲代码</label>
+				<input type="checkbox"  name="hobby"  id="pao" value="泡妞"><label for="pao">泡妞</label>
+				<input type="checkbox"  name="hobby" id="yun" value="运动"><label for="yun">运动</label>
+				<input type="checkbox"  name="hobby" id="lv" value="旅游"><label for="lv">旅游</label>
+				<input type="checkbox" name="hobby" id="qi" value="其他"><label for="qi">其他</label>
+				</td>
+			</tr>
+			
+				<tr>
+				<td>所在城市:</td>
+				<td><select name="ctiy">
+						<option>请选择</option>
+						<option value="中国">中国</option>
+						<option value="美国">美国</option>
+						<option value="日本">日本</option>
+				</select></td>
+			</tr>
+			
+			<tr>
+				<td>个人介绍</td>
+				<td><textarea rows="5" cols="30" placeholder="说点什么把...." name="text"></textarea></td>
+			</tr>
+ 
+        	<tr>
+				<td colspan="2" align="center" ><input type="submit" ><input type="reset"></td>
+			</tr>
+
+		</table>   
+    </form>
+</body>
+	<!-- 实现如图test01.png的页面效果，注意该网页的标题，点击注册，页面跳转到success.png所示的页面 -->
+</html>

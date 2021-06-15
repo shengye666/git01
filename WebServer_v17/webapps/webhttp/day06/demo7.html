@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#big{
+width: 300px;
+height: 300px;
+}
+.blue{
+    width:100px;
+	background-color: blue; 
+	height:100px;
+	float: left;
+}
+.red{
+ width:100px;
+background-color: red;
+height:100px; 
+	float: left;
+}
+</style>
+<script type="text/javascript">
+function add(){
+var d=document.getElementById("big");
+
+for(var i=0;i<9;i++){
+	if(i%2==0){
+		d.innerHTML+="<div class='blue'></div>";
+	}else{
+  d.innerHTML+="<div class='red'></div>";
+	}
+	
+}
+
+
+
+  
+}
+
+</script>
+</head>
+<body>
+
+<input type="button" value="九宫格" onclick="add()">
+<div id="big" ></div>
+</body>
+</html>

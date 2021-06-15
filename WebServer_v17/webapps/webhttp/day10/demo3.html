@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.div{
+background-color: red;
+width: 300px;
+height: 300px;
+}
+</style>
+<script type="text/javascript">
+function dowmfn(object){
+	var x=event.clientX;
+	var y=event.clientY;
+	console.log("鼠标按下"+object);
+	console.log("鼠标按下"+"X"+x+"Y"+y);
+}
+
+function mocefn(){
+	var x=event.clientX;
+	var y=event.clientY;
+	console.log("鼠标移动");	
+	console.log("鼠标移动"+"X"+x+"Y"+y);
+}
+function upfn(){
+	console.log("鼠标松开");	
+}
+
+
+</script>
+</head>
+<body>
+<div class="div" onmousedown="dowmfn(this)">拿下我</div>
+<p onmousedown="dowmfn()">haha</p>
+</body>
+</html>

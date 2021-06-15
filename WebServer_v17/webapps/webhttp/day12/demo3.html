@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table{
+width: 500px;
+
+}
+</style>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+  function add(){
+         var name=$("input[placeholder='姓名']").val();   
+         var age=$("input[placeholder='年龄']").val(); 
+         var solory=$("input[placeholder='工资']").val(); 
+            
+         var names=$("<td>"+name+"</td>");  
+         var ages=$("<td>"+age+"</td>");  
+         var solorys=$("<td>"+solory+"</td>");  
+         var co=$("<input type='button' value='删除'>");
+          var td=$("<td></td>");
+       co.click(function(){
+        	 $(this).parent().parent().remove();
+        });
+          td.append(co);
+          var tr=$("<tr></tr>");
+          
+          tr.append(names);
+          tr.append(ages);
+          tr.append(solorys);
+          tr.append(td);
+         $("table").append(tr);
+         
+  }
+             
+
+
+	  
+	  
+  
+  
+  
+  
+</script>
+</head>
+<body>
+<input type="text" placeholder="姓名" >
+<input type="text" placeholder="年龄"  >
+<input type="text" placeholder="工资"  >
+<input type="button" value="添加" onclick="add()">
+<hr>
+<table border="1">
+<tr><td>姓名</td><td>年龄</td><td>工资</td><td>操作</td></tr>
+</table>
+</body>
+</html>

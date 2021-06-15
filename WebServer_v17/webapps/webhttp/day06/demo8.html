@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.link{
+overflow: hidden;
+}
+
+
+.linklie{
+float:left;
+margin: 5px;
+width: 100px;
+height: 100px;
+border: 1px solid red;
+}
+
+
+</style>
+<script type="text/javascript">
+function add(){
+	var one=document.getElementById("parameterone");
+   var two=document.getElementById("parametertwo");
+   var onev=one.value;
+   var twov=two.value;
+   var link=document.getElementById("link");
+    var str="";
+   for(var i=0;i<onev;i++){
+	     str+="<div class='link'>"
+	   for(var j=0;j<twov;j++){
+		   str+="<div class='linklie'></div>";
+	   }
+	   str+="</div>";
+   }
+   
+   link.innerHTML=str;
+      
+      
+      
+}
+</script>
+</head>
+<body>
+行:<input type="text"  id="parameterone">
+列<input  type="text" id="parametertwo" > 
+<input type="button" value="生成" onclick="add()">
+<div id="link"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function operun(x){
+	var parameterone=document.getElementById("parameterone");
+	var parametertwo=document.getElementById("parametertwo");
+	var one=parameterone.value;
+	var two=parametertwo.value;
+	var d1=document.getElementById("d1");
+    	if(isNaN(one+two)||(one+two)==""){
+    		alert("内容不是符合");
+    		parameterone.value="";
+    		parametertwo.value="";
+    	}else{
+    		 switch(x){
+    		 case 0:
+    			 d1.innerText=parseFloat(one)+parseFloat(two);
+    			 break;
+    		 case 1:
+    			 d1.innerText=one-two;
+    			 break;
+    		 case 2:
+    			 d1.innerText=one*two;
+    			 break;
+    		 case 3:
+    			 d1.innerText=one/two;
+    			 break;
+    		 case 4:
+    			 d1.innerText="";
+    			 parameterone.value="";
+    	    	 parametertwo.value="";
+    			 break;
+    		 }
+    	}
+}
+
+</script>
+</head>
+<body>
+<input type="text" id="parameterone" >
+<input type="button" value="+" onclick="operun(0)">
+<input type="button" value="-" onclick="operun(1)">
+<input type="button" value="*" onclick="operun(2)">
+<input type="button" value="/" onclick="operun(3)">
+<input type="button" value="清除" onclick="operun(4)">
+<input type="text" id="parametertwo">
+<div id="d1"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+  
+/*   setInterval(function(){
+	  var date=new Date();
+	   date= date.toLocaleTimeString();
+     d1.innerText=date;
+  },1000) */
+  var  setId;
+  function add(){
+       var text=document.getElementById("myinput").value;
+          var d2=document.getElementById("d2");
+  if(isNaN(text)||text==""){
+	  
+  }else{  clearInterval(setId); 
+  d2.innerText="";
+	        text= text*60;
+	        d2.innerText=text.toFixed(1);
+	      setId= setInterval(function(){
+	    	      text=text-0.1;
+              if(text<0){
+            	  clearInterval(setId); 
+            	  d2.innerText="时间到";
+            	  return ;
+              }
+              d2.innerText=text.toFixed(1);
+	 },100);
+	 
+  }
+}
+
+function statr(){
+	 clearInterval(setId); 
+	add();
+}
+
+</script>
+</head>
+<body>
+<!-- <h1 id="d1"></h1> -->
+<input type="text" placeholder="请输入倒计时间" id="myinput">
+<input type="button" value="开始" onclick="statr()">
+<h1 id="d2"></h1>
+</body>
+</html>

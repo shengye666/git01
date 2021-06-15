@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>求阶乘</title>
+<style type="text/css">
+.red{
+color: red;
+}
+.bule{
+color: blue;
+}
+</style>
+<script type="text/javascript">
+function run(){
+	var d1=document.getElementById("value");
+	var value=parseInt(d1.value);
+	var div=document.getElementById("d1");
+	if(isNaN(value)||value==""){
+		div.innerText="请输入数字!";
+		div.className="red";
+	}else if(value<0){
+		div.innerText="负数没有乘阶!";
+		div.className="red";
+	}else if(value==0){
+		div.innerText="请输入大于0的数!";
+		div.className="red";
+	}else{
+		var sun=1;
+		for(var i=value;i>0;i--){
+			sun*=i;
+		}
+		div.innerText=sun;
+		div.className="blue";
+	}
+	
+	
+	
+	
+	
+	
+}
+</script>
+</head>
+<body>
+<input type="text" id="value" placeholder="请输入内容">
+<input type="button"  value="乘阶求"  onclick="run()">
+<div id="d1"></div>
+</body>
+</html>
+	<!-- 实现如图index02_1.png-index02_5.png所示的案例，点击“求阶乘”按钮，
+		1.如果输入非数字，给出相应提示，字体颜色为红色
+		2.输入的数字如果<0，给出提示，字体颜色为红色
+		3.输入的数字如果=0，给出提示，字体颜色为红色
+		4.输入的数字正确，计算出阶乘，并将结果显示出来，字体颜色为蓝色。
+		
+		注意：本案例中如果用户输入的是小数，那么自动取整。 -->

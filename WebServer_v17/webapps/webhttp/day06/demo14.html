@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+       var str="you can you do no can no bb"
+       /* 查找no的正则*/
+       var reg=/no/g;
+       alert(reg.exec(str));//no
+       alert(reg.exec(str));//no
+       alert(reg.exec(str));//找不到返回null
+       //校验文本
+       reg=/^you/i;
+       alert(reg.test(str));
+        //字符串个正则相关的函数
+       reg=/no/g;
+        alert(str.match(reg));//返回的是字符串类形;无这个字符时放回null
+        //替换多个字符,再java是直接用repalce方法就可以替换全部 ,再javascript则不一样,用replace只能替换一个,要用正值进行全部替换
+         alert(str.replace(reg,"add"));
+          
+        
+        
+        
+</script>
+</head>
+<body>
+</body>
+</html>

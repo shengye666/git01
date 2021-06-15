@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+h1 {
+	color: red;
+}
+
+.background {
+	background: #008000;
+}
+
+div {
+	border: 1px solid blue;
+}
+
+.a {
+	color: #e61d8a;
+}
+
+   #d1 {
+	color: blue;
+}
+
+   #d2 {
+	color: blue;
+}
+
+   #d3 {
+	color: red;
+}
+.b{
+	border: 2px solid #5c3566;
+}
+  input[type="text"]{
+  background-color: yellow;
+  }
+  
+  img[src="aa/da.png"] {
+	border:2px solid black;
+}   

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 表单格练习表</title>
+</head>
+<body>
+	<h1 style="font-size: 40px" align="center" id="a">表单格练习表</h1>
+	<div style="margin-bottom: 100px " align="center">
+		<table border="1"  width="404">
+		<caption align="top"><a href="#con">查看加班申请单</a></caption>
+			<tr>
+				<td colspan="4"><img alt="加载失败 " src="../../images/day02/banner.jpg"
+					align="middle" ></td>
+			</tr>
+
+			<tr >
+				<td style="padding: 5px;"><img src="../../images/day02/index_15.gif">视频排行</td>
+				<td style="padding: 5px;"><img src="../../images/day02/index_15.gif">新闻排行</td>
+				<td colspan="2" style="padding: 5px;"><img src="../../images/day02/index_15.gif">经典72胜10负</td>
+			</tr>
+				<tr>
+				<td >1--76年博士竞艳演出</td>
+				<td >1--姚明成冠军拼图基石</td>
+				<td  rowspan="2" align="center" ><a href="detail.html"><img alt="加载失败" src="../../images/day02/s1.jpg" ></a></td>
+				<td rowspan="2" align="center"> <a href="detail.html" target="_blank"><img alt="加载失败" src="../../images/day02/s3.jpg"></a></td>
+			</tr>
+			
+				<tr>
+				<td colspan="">2--巴克利职业生涯回顾</td>
+				<td colspan="">2--穆大叔确认与火箭续约</td>
+			</tr>
+			
+		</table>
+	</div>
+    <hr>
+    <div style="margin-top: 50px" align="center" id="con">
+          <h1>加班申请单</h1>
+          <form action="#">
+		<table id="con" border="1">
+		 <caption align="bottom"><a href="#a">返回顶部</a></caption>
+			<tr>
+			<td colspan="4">加班申请表</td>
+			</tr>
+			<tr>
+			<td>申请人:</td>
+			<td><input type="text" maxlength="16"></td>
+			<td>编号:</td>
+			<td><input type="text" maxlength="16"></td>
+			</tr>
+			<tr>
+		   <td>所属部门:</td>
+			<td><select name="部门">
+			<option value="技术" selected="selected">技术部</option>
+			<option value="商务">商务部</option>
+			<option value="财务">财务部</option>
+			</select></td>
+			<td>申请时间:</td>
+			<td><input type="date" name="time" ></td>
+			</tr>
+				<tr>
+			<td>加班天数:</td>
+			<td><input type="text" maxlength="16" name="day"></td>
+			<td>加班地点:</td>
+			<td><input type="text" maxlength="16" name="paly" ></td>
+			</tr>
+			<tr>
+		   <td>开始时间:</td>
+			<td><input type="date"  name="startday"></td>
+			<td>结束时间:</td>
+			<td><input type="date" name="endpaly" ></td>
+			</tr>
+			<tr>
+			 <td>事由</td>
+			<td colspan="3"><textarea rows="5" cols="70"></textarea></td>
+			</tr>
+			<tr>
+			<td colspan="4"><span style="font-weight: bold; ">审批意见</span></td>
+			</tr>
+			<tr>
+			 <td>直接领导:</td>
+			<td colspan="3"><textarea rows="4" cols="70"></textarea></td>
+			</tr>
+			<tr>
+			 <td>上级领导:</td>
+			<td colspan="3"><textarea rows="4" cols="70"></textarea></td>
+			</tr>
+		</table>
+		</form>
+		
+	</div>
+</body>
+	<!-- 实现如图test01.png的页面效果，
+		1.注意该网页的标题，
+		2.点击第一个表格中右下角的两张图片，都能跳转到detail.png所示的页面，在一个新页面显示
+		3.点击“查看加班申请表，跳转到第二个表格位置”
+		4.点击页面底部的“返回顶部”，跳转到页面的开头位置
+		所用图片在images/day02文件夹中 -->
+</html>

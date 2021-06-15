@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+ function ni(){
+	 /*弹出用户输入的内容*/
+   var input=document.getElementById("myinput");
+	 alert(input.value);
+	 if(isNaN(input.value)){
+		 input.value="不是数字";
+	 }else{
+		 input.value="是数字";
+	 }
+ }
+	function you(){
+			var inputs = document.getElementById("input");
+			var d=document.getElementById("mydiv");
+			if (isNaN(inputs.value)) {
+           inputs.value="内容不是数字";
+              d.innerText="内容不是数字";
+			} else {
+           inputs.value =inputs.value*inputs.value;     
+            d.innerText=inputs.value;
+			}
+
+		}
+</script>
+</head>
+<body>
+<input type="text" id="myinput">
+<input type="button"  value="按扭"   onclick="ni()">
+<input type="text" id="input">
+<input type="button"  value="平方"  onclick="you()">
+<div id="mydiv"></div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table{
+width: 800px;
+border: 2px solid red;
+margin: 50px;
+}
+td{
+border: 2px solid red;
+}
+</style>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+	
+  function add(obj){
+	  
+	var  name= $(obj).parent().siblings().eq(0).text();
+	 var plac= $(obj).parent().siblings().eq(1).text();                  
+	if( change(name)){
+		return;
+	}
+	//商品名字的td块
+	var  names=$("<td>"+name+"</td>");
+	
+   //	单价的td块
+	var  placs=$("<td>"+plac+"</td>");
+	// 数量的td块
+	var  number=$("<td><input type='button' value='+' onclick='cuntfn(1)'><span>1</span><input type='button' value='-' onclick='cuntfn(-1)'></td>");
+	
+	//总价的块
+	var totalp=$("<td>"+plac+"</td>");
+	//操作的块
+	var cao=$("<td></td>");
+	var bont=$("<input  type='button' value='删除'>");
+	bont.click(function(){
+		$(this).parent().parent().remove();
+		 cal();
+	})
+	cao.append(bont);
+	
+	
+	//行
+	var tr=$("<tr></tr>");
+	tr.append(names);
+	tr.append(placs);
+	tr.append(number);
+	tr.append(totalp);
+	tr.append(cao);
+	$("#t1").after(tr);
+	
+	
+	
+	//计算总价放添加事件底部
+	cal();
+  }
+	
+	function cuntfn(num){
+		//得到事件input
+		  var obj=event.target||event.srcElement;
+		  var  oldCont=$(obj).siblings("span").text();
+		  
+		  
+	//求单个物品总价的值
+		  var newCont=parseInt(oldCont)+num;
+		  if(newCont==0){
+			  return;
+		  }
+		  $(obj).siblings("span").text(newCont);
+		  var  palce = $(obj).parent().prev().text();
+		     var  total= newCont*palce;
+		     $(obj).parent().next().text(total);
+		     cal();
+		     
+	}
+	
+	
+		  //求全部总价
+         function cal(){
+			var total=0;
+			  $("table:eq(1) tr").each(function(){
+				var mory= $(this).children().eq(3).text();
+				   mory=parseInt(mory);
+					   if(!isNaN(mory)){
+						   total+=mory;
+					   }
+			  })
+			 $("#t2 td").text("总价: "+total+"元");
+		  }
+		  //实现数量变动
+		  function change(x){
+			  var bool=false;
+			  var index=1;
+			  $("table:eq(1) tr").each(function(){
+					var name=$(this).children().eq(0).text();
+					var place=$(this).children().eq(1).text();
+					var number=$(this).children().eq(2).text();
+	            	   //找到重复的元素 
+	              if(name==x){ 
+	            	  number=parseInt(number)+1;
+	            	  places= place*number;         	  
+	            	   
+	            	  $(this).children().eq(2).children("span").text(number);
+	            	  $(this).children().eq(3).text(places);
+	            	        bool=true;
+	                }
+				  })
+				   cal();
+				  return bool;
+		  }
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+</script>
+</head>
+<body>
+<table >
+<tr><td>商品名称</td><td>单价</td><td>库存</td><td>商品介绍</td><td>操作</td></tr>
+<tr><td>飞机bei</td><td>200</td><td>500</td><td>你懂得</td><td><input type="button" value="添加到购物车" onclick="add(this)"></td></tr>
+<tr><td>小姐姐</td><td>5000</td><td>2</td><td>嘿嘿</td><td><input type="button" value="添加到购物车" onclick="add(this)"></td></tr>
+<tr><td>岛国文化片</td><td>30</td><td>3000</td><td>博大京深</td><td><input type="button" value="添加到购物车" onclick="add(this)"></td></tr>
+<tr><td>苍老师</td><td>1</td><td>1</td><td>java大牛</td><td><input type="button" value="添加到购物车" onclick="add(this)"></td></tr>
+</table>
+<hr>
+<table  id="t3">
+<tr  id="t1"><td>商品名称</td><td>单价</td><td>数量</td><td>总价</td><td>操作</td></tr>
+<tr  id="t2" ><td colspan="5" align="right" >总计 0元</td></tr>
+</table>
+</body>
+</html>

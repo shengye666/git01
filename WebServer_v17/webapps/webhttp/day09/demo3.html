@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<select  id="s1" onchange="changefn()">
+<option>请选择城市</option>
+<option  value="0">汕头</option>
+<option  value="1">广州</option>
+<option  value="2">深圳</option>
+</select>
+
+<select id="s2">
+<option>请选择区域</option>
+</select>
+
+</body>s
+<script type="text/javascript">
+function changefn(){
+	s2.innerHTML="<option>请选择区域</option>";
+	
+	var arr=[["金平","龙湖","朝阳"],
+	            ["越秀","天河","白云"],
+	            ["罗湖","福田","南山"]];
+	   var ctiys = arr[s1.value];
+	
+		for (var i = 0; i < ctiys.length; i++) {
+			var ctiy = ctiys[i];
+         var option=document.createElement("option");
+			option.innerText = ctiy;
+			s2.appendChild(option);
+		}
+	}
+</script>
+</html>

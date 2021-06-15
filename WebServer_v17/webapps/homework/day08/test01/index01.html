@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>猜数字</title>
+<style type="text/css">
+.success{
+  color: green;
+}
+.defalse{
+  color: red;
+}
+</style>
+<script type="text/javascript">
+	var num=parseInt(Math.random()*100);
+function run(){
+	var value=parseInt( document.getElementById("value").value);
+  var  div=	document.getElementById("d1");
+	if(isNaN(value)){
+		 div.innerText="内容不是数字";
+		 div.className="defalse";
+	}else if(num==value){
+		div.innerText="恭喜猜对了";
+		 div.className="success";
+	}else if(num>value){
+		div.innerText="猜小了";
+		 div.className="defalse";
+	}else{
+		div.innerText="猜大了";
+		 div.className="defalse";
+	}
+	
+	
+	
+}
+
+</script>
+</head>
+<body>
+<input type="text" id="value">
+<input type="button"  value="猜数字"  placeholder="请输入内容" onclick="run()">
+<div id="d1"></div>
+
+
+</body>
+</html>
+	<!-- 实现如图index01.png-index05.png所示的案例，本案例中先随机生成一个整数，点击“猜数字”按钮，
+		1.如果输入非数字，给出相应提示，字体颜色为红色
+		2.输入的数字如果大于/小于随机生成的数字，给出提示，字体颜色为红色
+		3.输入的数字如果和随机生成的数字相等，给出提示，字体颜色为绿色。
+		Math.random()
+		注意：本案例中如果用户输入的是小数，那么自动取整。 -->

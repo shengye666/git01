@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#big{
+width: 300px;
+border: 1px solid blue;
+/*如果所有子元素全部浮动,册自动识别高度为0;通过一下代码解决*/
+/* overflow: hidden; */
+}
+#d1,#d2{
+width: 100px;
+height: 100px;
+border: 1px solid red;
+float: right;
+
+}
+
+
+</style>
+</head>
+<body>
+
+	<div id="big">
+
+		<div id="d1"></div>
+		<div id="d2"></div>
+		<!-- 消除浮动影响的第二方法 -->
+    <div style="clear:both"></div>
+	</div>
+</body>
+</html>

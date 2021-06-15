@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.lie{
+margin:20px;
+width: 100px;
+height: 100px;
+background-color: red;
+float: left;
+}
+.link{
+height: 100px;
+overflow: hidden;
+}
+
+</style>
+<script type="text/javascript">
+/* function add(){
+
+	var parse1=document.getElementById("parse1").value;
+	var parse2=document.getElementById("parse2").value;
+	var div=document.createElement("div");
+		 document.body.appendChild(div);
+	var str='';
+	for(var i=0;i<parse1;i++){ 
+		 str+="<div class='link'>";
+		for(var j=0;j<parse2;j++){
+         str+="<div class='lie'></div>"			
+		}
+		str+="</div >";
+	}
+	div.innerHTML=str;
+	
+} */
+   function add1(){
+		for(var i=0;i<10;i++){ 
+			 var rowDiv=document.createElement("div");
+			 rowDiv.className="link";
+			for(var j=0;j<i+1;j++){
+				 var colDiv=document.createElement("div");
+				 rowDiv.appendChild(colDiv);
+				 colDiv.className="lie";
+			}
+			 document.body.appendChild(rowDiv);
+		}
+	   
+   }
+</script>
+</head>
+<body>
+<input type="button" value="生成" onclick="add1()"> 
+
+</body>
+</html>

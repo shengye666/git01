@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body><input type="checkbox">打篮球
+<input type="checkbox">泡妞
+<input type="checkbox">泡妞
+<div id="id" class="d1">div1</div>
+<div class="d1">div2</div>
+<input type="button" value="添加元素" onclick="add()">
+
+
+
+</body>
+<script type="text/javascript">
+function add(){
+	var h1=document.createElement("h1");
+	h1.innerText="你好";
+	document.body.insertBefore(h1,id);
+	document.body.appendChild(h1);
+}
+
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input  type="text"  id="text">
+<input type="button" value="添加" onclick="add()">
+<input type="button" value="插入" onclick="insetr()">
+<input type="button" value="删除" onclick="del()">
+<hr>
+<ul>
+<li>汕头</li>
+<li id="gd">广州</li>
+<li>深圳</li>
+</ul>
+
+</body>
+<script type="text/javascript">
+function add(){
+	 var text=document.getElementById("text").value;
+  	 var li=document.createElement("li");               
+	    li.innerHTML=text;
+	    var ul=document.getElementsByTagName("ul")[0];
+  	    ul.appendChild(li);
+} 
+
+function insetr(){
+	var text=document.getElementById("text").value;
+	var li=document.createElement("li");   
+	 li.innerHTML=text;
+	  var ul=document.getElementsByTagName("ul")[0];
+	        ul.insertBefore(li,gd);
+	 
+}
+function del(){
+	 var ul=document.getElementsByTagName("ul")[0];
+	 ul.removeChild(gd);
+	 
+}
+</script>
+</html>

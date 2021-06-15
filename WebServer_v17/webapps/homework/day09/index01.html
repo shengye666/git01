@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>变态小方块</title>
+<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	.div1,.div2{
+		width: 800px;
+		height: 200px;
+		margin: 0px auto;
+	}
+	.div1 li{
+		width: 100px;
+		height: 100px;
+		float: left;
+		list-style: none;
+	}
+	.div2 li{
+		width: 100px;
+		height: 100px;
+		float: left;
+		list-style: none;
+		display:none;
+	}
+	
+	#block1,#block11{
+		background-color: red;
+	}
+	#block2,#block21{
+		background-color: #FF8040;
+	}
+	#block3,#block31{
+		background-color: pink;
+	}
+	#block4,#block41{
+		background-color: #FF00FF;
+	}
+	#block5,#block51{
+		background-color: #400080;
+	}
+	#block6,#block61{
+		background-color: #00FFFF
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var block1 = document.getElementById('block1');
+		var block2 = document.getElementById('block2');
+		var block3 = document.getElementById('block3');
+		var block4 = document.getElementById('block4');
+		var block5 = document.getElementById('block5');
+		var block6 = document.getElementById('block6');
+		
+		var block11 = document.getElementById('block11');
+		var block21 = document.getElementById('block21');
+		var block31 = document.getElementById('block31');
+		var block41 = document.getElementById('block41');
+		var block51 = document.getElementById('block51');
+		var block61 = document.getElementById('block61');
+		
+		block1.onclick = function(){
+			block1.style.display = 'none';
+			block11.style.display = 'block';
+		}
+		block2.onclick = function(){
+			block2.style.display = 'none';
+			block21.style.display = 'block';
+		}
+		block3.onclick = function(){
+			block3.style.display = 'none';
+			block31.style.display = 'block';
+		}
+		block4.onclick = function(){
+			block4.style.display = 'none';
+			block41.style.display = 'block';
+		}
+		block5.onclick = function(){
+			block5.style.display = 'none';
+			block51.style.display = 'block';
+		}
+		block6.onclick = function(){
+			block6.style.display = 'none';
+			block61.style.display = 'block';
+		}
+		
+		block11.onclick = function(){
+			block11.style.display = 'none';
+			block1.style.display = 'block';
+		}
+		block21.onclick = function(){
+			block21.style.display = 'none';
+			block2.style.display = 'block';
+		}
+		block31.onclick = function(){
+			block31.style.display = 'none';
+			block3.style.display = 'block';
+		}
+		block41.onclick = function(){
+			block41.style.display = 'none';
+			block4.style.display = 'block';
+		}
+		block51.onclick = function(){
+			block51.style.display = 'none';
+			block5.style.display = 'block';
+		}
+		block61.onclick = function(){
+			block61.style.display = 'none';
+			block6.style.display = 'block';
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="div1">
+		<ul>
+			<li id='block1'></li>
+			<li id='block2'></li>
+			<li id='block3'></li>
+			<li id='block4'></li>
+			<li id='block5'></li>
+			<li id='block6'></li>
+		</ul>
+	</div>
+	<div class="div2">
+		<ul>
+			<li id='block11'></li>
+			<li id='block21'></li>
+			<li id='block31'></li>
+			<li id='block41'></li>
+			<li id='block51'></li>
+			<li id='block61'></li>
+		</ul>
+	</div>
+
+</body>
+</html>

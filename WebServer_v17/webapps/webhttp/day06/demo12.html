@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function run() {
+		var arr = [ "b", "c" ];
+		var name = document.getElementById("name");
+		var a=false;
+	   var d1=document.getElementById("d1");
+		for (var i = 0; i < arr.length; i++) {
+			if (name.value==arr[i]) {
+				   d1.innerHTML="<img src='aa/"+arr[i]+".jpg'>";
+			             a=true;	
+                       break;
+			}
+		}
+		if(!a){
+			d1.innerHTML="<h1>图片不存在</h1>";
+		}
+
+	}
+</script>
+</head>
+<body>
+<input type="text" id="name">
+<input type="button" value="图片"  onclick="run()" >
+<div id="d1"></div>
+</body>
+</html>

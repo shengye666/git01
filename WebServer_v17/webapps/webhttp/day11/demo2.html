@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+         $(function(){
+        	 $("input").click(function(){
+                 	var $h1=$("<h1>我是新元素</h1>");
+        		      /*   $("#big").append($h1); 在选定元素添加在最后面*/
+        		 // $("#big").prepend($h1);//在选定元素内添加在最前
+        		/*   $("h1:contains(二)").before($h1);插入在选定元素前面 */
+        		/*   $("h1:contains(二)").after($h1);  插入在选定元素后面*/
+                       $("h1").remove("h1:contains(二)");        		
+        		
+        	 })
+         })
+
+</script>
+</head>
+<body>
+<input type="button" value="按钮">
+<div id="big">
+<h1>一 </h1>
+<h1>二</h1>
+<h1>三</h1>
+</div>
+
+</body>
+</html>

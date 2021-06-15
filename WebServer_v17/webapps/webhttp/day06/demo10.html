@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var arr=[10,5,89,56,7,46,2,32,44];
+arr.sort();
+function run(a,b){
+	return a-b;/*升序  前数大于后数,往后走*/
+	/* return b-a; 降序 后数大于前数,往前走 */
+}
+arr.sort(run);
+alert(arr);
+</script>
+</head>
+<body>
+<input type="button" value="按住" >
+
+</body>
+</html>

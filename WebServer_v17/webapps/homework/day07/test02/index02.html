@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>div填充练习</title>
+<style type="text/css">
+#d1{
+width: 300px;
+height: 300px;
+background-color: red;
+}
+.green{
+float:left;
+width:100px;
+height:100px;
+background-color: green;
+}
+.yellow{
+float:left;
+width:100px;
+height:100px;
+ background-color: yellow;
+}
+</style>
+<script type="text/javascript">
+function run(){
+	 var d=document.getElementById("d1");
+	 for(var i=0;i<9;i++){
+	     d.innerHTML+=(i%2==0)?"<div class='green'>"+i+"</div>":"<div class='yellow'>"+i+"</div>";
+	 }
+}
+</script>
+</head>
+<body>
+<input type="button" value="填充" onclick="run()">
+<div id="d1"></div>
+</body>
+</html>
+	<!-- 实现如图index02_before.png所示案例，点击填充按钮，使用九宫格式小div填充大div，实现的效果如图index02_after.png所示 -->

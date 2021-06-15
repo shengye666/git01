@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+div,img{
+width:200x;
+height:200px;
+}
+div{
+position: relative;
+}
+img{
+position: absolute;
+}
+</style>
+<script type="text/javascript">
+
+	var imgs=document.getElementsByName("img");
+	var index=0;
+	var TimeId=setInterval(function(){
+		        var r= index%3;  
+		for(var i=0;i<imgs.length;i++){
+			var img=imgs[i];
+			if(i==r){
+				img.style.display="block";
+			}else{
+				img.style.display="none";
+			}
+		}
+		
+		if(index==30){
+			index=0;
+			clearInterval(TimeId);
+		} 
+	
+		index++;
+	},2000);
+	
+
+</script>
+</head>
+<body>
+
+<div id="d1" onmouseover="stop()"><img src="aa/1508828578761-0.jpg" name="img" >
+<img src="aa/20171109053914202.jpg" name="img" >
+<img src="aa/t01c13583f138b49e13.jpg" name="img" ></div>
+</body>
+</html>

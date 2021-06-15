@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>背景滚动</title>
+<style type="text/css">
+.form{
+   border: 4px solid #ddd;
+   border-radius:10px;/*圆角属性*/
+       width: 376px;
+       /*  左右设置auto自动居中计算外边距!
+       可以实现"盒子模型"
+       */
+	margin: 200px auto ;
+	
+}
+.form h2{
+text-align: center;
+background-color:#aaa;
+color: #fff;
+margin: 0;
+padding: 8px 0;
+}
+.form-field {
+   margin: 10px;
+}
+.buttos{
+text-align: center;
+padding: 10px 0;
+text-align: center;
+}
+.buttos input{
+background-color: #aaa;
+border: 4px;
+border-radius: 8px;
+color: #fff;
+padding:8px;
+cursor:auto;
+
+}
+
+
+.form-field input{
+width: 80px;
+}
+.form-field label{
+/*
+inline:行内元素,不能设置宽高
+inline-block:行内块,可以设置宽高
+
+*/
+	width: 80px;
+	display: inline-block;
+}
+
+
+
+
+</style>
+</head>
+<body>
+	<h1>更改显示方式</h1>
+	<form action="" class="form">
+	<h2>登陆</h2>
+	<div class="form-field">
+	<label >用户名</label>
+	<input type="text">
+	<span>8-10字母</span>
+	</div>
+	<div class="form-field">
+	<label >密码</label>
+	<input type="text">
+	<span>8-10个字母</span>
+	</div >
+	<div class="buttos"><input type="submit"value="登陆"></div>
+	</form>
+</body>
+</html>

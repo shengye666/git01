@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.ti{
+width: 100px;
+}
+</style>
+<script type="text/javascript">
+ onload=function(){
+	 closeall();
+ }
+ 
+    function closeall(){
+	 var tis=document.getElementsByClassName("ti");
+	  for(var i=0;i<tis.length;i++){
+		  var ti=tis[i];
+		  var ul=ti.getElementsByTagName("ul")[0];
+		   ul.style.display="none";
+	  }
+	   
+   }
+ 
+ 
+    function myfn(){
+    var obj=event.target||event.srcElement;    	
+      if(obj.className=="ti" ){
+    	  var ul=obj.getElementsByTagName("ul")[0];
+    	  if(ul.style.display=="none"){
+    		  closeall();
+    		  ul.style.display="block";
+    	  }else{
+    		  ul.style.display="none";
+    	  }
+    	  
+      }
+    }
+ 
+  
+
+
+</script>
+</head>
+<body>
+	<ul onclick="myfn()">
+		<li class="ti">美女好友
+			<ul>
+				<li>kiki</li>
+				<li>mimi</li>
+				<li>lili</li>
+			</ul>
+		</li>
+		<li class="ti">垃圾好友
+			<ul>
+				<li>狗嘉</li>
+				<li>实施</li>
+				<li>又有</li>
+			</ul>
+		</li>
+		<li class="ti">呵呵呵好友
+			<ul>
+				<li>猪</li>
+				<li>狗</li>
+				<li>猫</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

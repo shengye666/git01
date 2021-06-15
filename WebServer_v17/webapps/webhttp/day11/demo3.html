@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<input  type="text"  id="text">
+<input type="button" value="添加" >
+<input type="button" value="插入" >
+<input type="button" value="删除" >
+<hr>
+<ul>
+<li>汕头</li>
+<li id="gd">广州</li>
+<li>深圳</li>
+</ul>
+
+</body>
+<script type="text/javascript">
+$(function(){
+	$("input[value='添加']").click(function(){
+		if($("#text").val()==''){
+			
+		}else{
+		  var $li=$("<li></li>");
+		  $li.text($("#text").val());
+		  $("ul").append($li);
+		}
+	})
+	$("input[value='插入']").click(function(){
+		if($("#text").val()==''){
+			
+		}else{
+		  var $li=$("<li></li>");
+		  $li.text($("#text").val());
+		  $("#gd").before($li);
+		}
+	})
+	$("input[value='删除']").click(function(){
+		   $("li").remove("#gd");
+	})
+	
+	
+	
+})
+
+</script>
+</html>

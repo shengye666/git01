@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.big{
+width: 450px;
+height: 550px;
+border: 8px solid #999;
+border-radius:10px;
+padding: 10px;
+margin: 25px auto;
+overflow: hidden;
+}
+.div{
+width: 500px;
+overflow: hidden;
+}
+div>p{
+padding: 0px;
+margin:0px 10px 2px 6px;;
+float:left;
+border: 8px solid #999;
+width: 300px;
+height: 100px;
+border-radius: 8px;
+font-size: 50px;
+font-weight: bold;
+overflow: auto;
+line-height: 100px;
+}
+.button{
+float:left;
+margin:5px;
+padding: 0px;
+width: 100px;
+height: 100px;
+border: 8px solid #999;
+background-color: #ccc;
+border-radius: 8px;
+font-size: 30px;
+font-weight: bolder;
+}
+
+</style>
+<script type="text/javascript">
+function fn(x){
+	var p=document.getElementById("p");
+	if('C'==x){
+		p.innerText="";
+	}else if('='==x){
+		p.innerText=eval(p.innerText);
+	}else{
+	  p.innerHTML+=x;
+	}
+}
+</script>
+</head>
+<body>
+<div class="big">
+<div class="div">
+<p id="p"></p><input type="button" class="button" value="C" onclick="fn('C')">
+</div>
+<div class="div">
+<input type="button" class="button" value="7"onclick="fn(7)" >
+<input type="button" class="button" value="8" onclick="fn(8)">
+<input type="button" class="button" value="9" onclick="fn(9)">
+<input type="button" class="button" value="/" onclick="fn('/')">
+</div>
+<div class="div">
+<input type="button" class="button" value="4" onclick="fn(4)">
+<input type="button" class="button" value="5" onclick="fn(5)">
+<input type="button" class="button" value="6" onclick="fn(6)">
+<input type="button" class="button" value="*" onclick="fn('*')">
+</div>
+<div class="div">
+<input type="button" class="button"value="1" onclick="fn(1)">
+<input type="button" class="button"value="2" onclick="fn(2)">
+<input type="button" class="button"value="3" onclick="fn(3)">
+<input type="button" class="button"value="-" onclick="fn('-')">
+</div>
+<div class="div">
+<input type="button" class="button"value="0" onclick="fn(0)">
+<input type="button" class="button"value="." onclick="fn('.')">
+<input type="button" class="button"value="=" onclick="fn('=')">
+<input type="button" class="button"value="+" onclick="fn('+')">
+</div>
+</div>
+</body>
+</html>

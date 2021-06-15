@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.visibilty{
+  visibility:visible; 
+}
+.hidden{
+ visibility:hidden; 
+}
+</style>
+<script type="text/javascript">
+function add(x){
+	var name=document.getElementById("name");
+	var passwork=document.getElementById("passwork");
+	var namekwen=document.getElementById("namekwen");
+	var passworkwen=document.getElementById("passworkwen");
+	var regexone=/^\w{6,10}$/;
+	var regextwo=/^\w{10,16}$/;
+	
+	switch(x){
+	case 1:
+		if(!regexone.test(name.value)){
+			namekwen.className="visibilty";
+		}else{
+			namekwen.className="hidden";
+		}
+		break;
+	case 2:
+		if(!regextwo.test(passwork.value)){
+			passworkwen.className="visibilty";
+		}else{
+			passworkwen.className="hidden";
+		}
+		break;
+	case 3:
+		if(!regexone.test(name.value)){
+			
+			namekwen.className="visibilty";
+		}else{
+			namekwen.className="hidden";
+		}
+		if(!regextwo.test(passwork.value)){
+			passworkwen.className="visibilty";
+			
+		}else{
+			passworkwen.className="hidden";
+		}
+		
+		if(regexone.test(name.value)&&regextwo.test(passwork.value)){
+			return true;
+		}else{
+			return false;
+		}
+            		
+	}
+}
+
+</script>
+</head>
+<body>
+<form action="#">
+<input type="text"  name="names" id="name"onblur="add(1)"><span id="namekwen" class="hidden">格式错误</span>
+<input type="text" name="passworks" id="passwork" onblur="add(2)"><span  id="passworkwen" class="hidden">格式错误</span><br>
+<!-- <input type="button" value="校验"  onclick="add(3)"> -->
+<input type="submit" value="登陆注册" onclick="return add(3)">
+</form>
+</body>
+</html>

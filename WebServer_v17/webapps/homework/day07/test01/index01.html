@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>简单计算器</title>
+<script type="text/javascript">
+ function add(x){
+	var num1=document.getElementById("num1"); 
+	var num2=document.getElementById("num2"); 
+	var result=document.getElementById("result"); 
+	if(isNaN(num1.value)||isNaN(num2.value)||num1.value==""||num2.value==""){
+		alert("输入内容有误,不能参与计算");
+		num1.value="";
+		num2.value="";
+		 result.value="";
+	}else{
+		
+	switch(x){
+	case 1:
+		result.value= parseInt(num1.value)+parseInt(num2.value);
+	   break;
+	case 2:
+		result.value=num1.value-num2.value;
+		break;
+	case 3:
+		result.value=num1.value*num2.value;
+		break;
+	case 4:
+		result.value=num1.value/num2.value;
+		break;
+	 }
+	}
+ }
+function run(){
+	
+} 
+ 
+</script>
+</head>
+<body>
+<h1>简易计算器</h1>
+num1:<input type="text" id="num1" ><br><br>
+num2:<input type="text" id="num2">
+<hr>
+<input type="button" value="+"  onclick="add(1)" >
+<input type="button" value="-"  onclick="add(2)">
+<input type="button" value="*" onclick="add(3)">
+<input type="button" value="/" onclick="add(4)">
+<hr>
+结果:<input type="text" id="result">
+</body>
+</html>
+	<!-- 实现index01.png图上所示的简单计算器，当输入的内容为非数字时，给出提示“输入的内容有误，不能参与计算！”，如图error.png -->

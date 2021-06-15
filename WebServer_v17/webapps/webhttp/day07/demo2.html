@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.green{
+color: green;
+}
+.red{
+color: red;
+}
+</style>
+<script type="text/javascript">
+function add(){
+	var regexone=/^\w{6,10}$/;
+	var regextwo=/^\w{10,16}$/;
+	var  name=document.getElementById("name");
+	var   passwork=document.getElementById("passwork");
+	var  namekwen=document.getElementById("namekwen");
+		var passworkwen=document.getElementById("passworkwen");
+		
+		namekwen.className=regexone.test(name.value)?namekwen.className="green":namekwen.className="red";
+		
+		if((passwork.value).match(regextwo)!=null){
+			passworkwen.className="green";
+	}else{
+		passworkwen.className="red";
+	} 
+	
+	
+}
+</script>
+</head>
+<body>
+<input type="text" id="name"onblur="add()"><span id="namekwen" >6-10位数字,字母,下划线</span>
+<input type="text" id="passwork" onblur="add()"><span  id="passworkwen">10-16位数字,字母,下划线</span><br>
+<input type="button" value="校验" >
+</body>
+</html>

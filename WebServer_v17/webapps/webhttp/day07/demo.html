@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.green{
+color: green;
+}
+.red{
+color: red;
+}
+
+</style>
+<script type="text/javascript">
+function run(x){
+	
+var d=document.getElementById("r");
+     d.className=x;
+}
+</script>
+</head>
+<body>
+<a href="http://www.tmooc.cn" onclick="return confirm('确定跳转')">跳转</a>
+<hr>
+<input type="button" value="红色"  onclick="run('red')">
+<input type="button" value="蓝色"  onclick="run('green')">
+<div id="r">我</div>
+
+</body>
+</html>

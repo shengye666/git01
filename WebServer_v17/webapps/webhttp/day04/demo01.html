@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>盒子模型</title>
+<style type="text/css">
+#box {
+	border: 3px dashed #ddd; /* 设定边框,盒子皮的厚度 */
+	margin: 8px;
+		background-color: red; 
+}
+
+#box2 {
+	margin: 30px 20px 8px ;
+	border: 3px dashed #00f;
+	/*背景绘制子内边距之内,外边剧范围不绘制背景*/
+	background-color: blue; 
+}
+
+.a {
+	width: 100px;
+	height: 80px;
+	padding: 20px;/*设定内边距 */
+}
+</style>
+</head>
+<body>
+     <h1>盒子模型</h1>
+     <div id="box"  class="a">呵呵呵</div>
+     
+     <div id="box2" class="a" >盒子外部模型相互侵占</div>
+</body>
+</html>
